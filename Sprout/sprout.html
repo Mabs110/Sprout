@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="sprout.css">
+    <title>Sobre nosotros</title>
+    
+</head>
+
+<body>
+    
+<header>
+  <div class="menu">
+    <section class="menu-section">
+      <!-- Botón para abrir sidebar lateral -->
+      <button id="sidebar-btn" class="menu-btn">☰</button>
+
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="img/logo=fondo oscuro 2.svg" width="150" class="menu__logo"/>
+      </a>
+
+      <!-- Botón menú responsive (solo en mobile) -->
+      <button id="menu-btn" class="menu-btn mobile-only">☰</button>
+    </section>
+
+    <!-- Menú links (desktop y mobile) -->
+    <nav class="menu__arriba" id="menu-links">
+      <a href="index.html">Inicio</a>
+      <a href="#">Favoritos</a>
+      <a href="#">Noticias</a>
+      <a href="sprout.html">Sobre nosotros</a>
+    </nav>
+
+    <!-- Carrito -->
+    <div class="header__cart">
+      <button id="cart-btn" class="cart-btn">
+        <img src="img/carrito.webp" alt="Carrito" class="cart-icon">
+        <span id="cart-badge" class="badge">0</span>
+      </button>
+
+      <!-- Ventana del carrito -->
+      <div id="cart-modal" class="modal">
+        <div class="modal-content">
+          <span id="close-modal" class="close-btn">✖</span>
+          <h2>Tu carrito</h2>
+          <ul id="cart-items"></ul>
+          <p id="cart-empty">Tu carrito está vacío</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Sidebar lateral -->
+<aside id="sidebar" class="sidebar">
+  <button id="close-sidebar">✖</button>
+  <nav>
+    <ul>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Favoritos</a></li>
+      <li><a href="#">Cocina</a></li>
+      <li><a href="#">Limpieza</a></li>
+      <li><a href="#">Mascotas</a></li>
+      <li><a href="#">Noticias</a></li>
+    </ul>
+  </nav>
+</aside>
+
+        <main>
+        <div class="div">
+            <h2 class="promos">Conoce más sobre nosotros</h2>
+
+
+<div class="accordion my-4 shadow rounded accordion-sprout" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed sprout-btn" type="button"
+        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+        aria-expanded="false" aria-controls="flush-collapseOne">
+        🌱 Misión
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse"
+      aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Ayudar a las personas a encontrar productos sustentables, accesibles y responsables con el planeta.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed sprout-btn" type="button"
+        data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+        aria-expanded="false" aria-controls="flush-collapseTwo">
+        🌍 Visión
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+      aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Soñamos con un mundo más verde, donde lo sustentable sea la norma y no la excepción.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed sprout-btn" type="button"
+        data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+        aria-expanded="false" aria-controls="flush-collapseThree">
+        🌟 Valores
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse"
+      aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Ecología, comunidad, compromiso, responsabilidad social, y amor por la Tierra.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="div-dos">
+            <h2 class="noticias">Siguenos en nuestras redes sociales</h2>
+            
+
+            <a href="#" class="instagram"><svg width="50" height="50" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40.3445 29.1376C40.3445 35.327 35.327 40.3445 29.1376 40.3445C22.9482 40.3445 17.9307 35.327 17.9307 29.1376C17.9307 22.9482 22.9482 17.9307 29.1376 17.9307C35.327 17.9307 40.3445 22.9482 40.3445 29.1376Z" fill="#5A6636"/>
+<path d="M44.8276 0C52.2549 0 58.2759 6.021 58.2759 13.4483V44.8276C58.2759 52.2549 52.2549 58.2759 44.8276 58.2759H13.4483C6.021 58.2759 3.61017e-08 52.2549 0 44.8276V13.4483C0 6.021 6.021 3.61006e-08 13.4483 0H44.8276ZM29.1379 13.4483C20.4728 13.4483 13.4483 20.4728 13.4483 29.1379C13.4483 37.8031 20.4728 44.8276 29.1379 44.8276C37.8031 44.8276 44.8276 37.8031 44.8276 29.1379C44.8276 20.4728 37.8031 13.4483 29.1379 13.4483ZM48.1897 6.72414C46.3328 6.72414 44.8276 8.22939 44.8276 10.0862C44.8276 11.943 46.3328 13.4483 48.1897 13.4483C50.0465 13.4483 51.5517 11.943 51.5517 10.0862C51.5517 8.22939 50.0465 6.72414 48.1897 6.72414Z" fill="#5A6636"/>
+</svg>
+</a>
+            <a href="#"class="facebook"><svg width="50" height="50" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M65 32.5815C65 14.5965 50.44 0 32.5 0C14.56 0 0 14.5965 0 32.5815C0 48.3509 11.18 61.4812 26 64.5113V42.3559H19.5V32.5815H26V24.4361C26 18.1479 31.1025 13.0326 37.375 13.0326H45.5V22.807H39C37.2125 22.807 35.75 24.2732 35.75 26.0652V32.5815H45.5V42.3559H35.75V65C52.1625 63.3709 65 49.4912 65 32.5815Z" fill="#5A6636"/>
+</svg></a>
+            <a href="#"class="compartir"><svg width="50" height="50" viewBox="0 0 59 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M48.1885 0C53.7588 0 58.2743 4.5156 58.2744 10.0859C58.2744 15.6564 53.7589 20.1729 48.1885 20.1729C45.6695 20.1728 43.3682 19.2466 41.6006 17.7197L20.165 29.9961C20.1673 30.0831 20.1728 30.1703 20.1729 30.2578C20.1729 32.0625 19.6955 33.7551 18.8652 35.2207L41.374 47.4785C43.1689 45.8327 45.5613 44.8282 48.1885 44.8281C53.7589 44.8281 58.2743 49.3437 58.2744 54.9141C58.2744 60.4845 53.7589 65 48.1885 65C42.6181 64.9999 38.1025 60.4845 38.1025 54.9141C38.1025 54.4043 38.1409 53.9035 38.2139 53.4141L13.2676 39.8281C12.2671 40.1605 11.198 40.3447 10.0859 40.3447C4.5156 40.3446 0 35.8282 0 30.2578C0.000145339 24.6876 4.51569 20.172 10.0859 20.1719C13.1301 20.1719 15.8567 21.5229 17.7061 23.6553L38.2646 11.8809C38.16 11.2983 38.1025 10.6986 38.1025 10.0859C38.1027 4.51567 42.6182 0.000110296 48.1885 0Z" fill="#5A6636"/>
+</svg>
+</a>
+        </div>
+</main>
+        
+<footer>
+    <div class="pie">
+        <img src="img/logo=fondo oscuro 2.svg" width="150" class="pie__logo"/>
+        <nav class="pie__menu">
+            <a href="index.html">Inicio</a>
+            <a href="#">Favoritos</a>
+            <a href="#">Cocina</a>
+            <a href="#">Limpieza</a>
+            <a href="#">Mascotas</a>
+            <a href="#">Noticias</a>
+        </nav>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
