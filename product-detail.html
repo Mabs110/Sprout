@@ -5,136 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Detalle del Producto</title>
-    
 </head>
 <body>
+    
     <div class="pantalla-inicio">
-            <img src="img/logo=fondo oscuro 2.svg" alt="Logo" class="logo-inicio">
-            </div>
-    <header>
-            
-            <div class="menu">
-                       <a href="index.html"><img src="img/logo=fondo oscuro 2.svg" width="150" class="menu__logo"/></a>
-            <nav class="menu__arriba">
-                <a href="index.html">Inicio</a>
-                <a href="#">Favoritos</a>
-                <a href="#">Cocina</a>
-                <a href="#">Limpieza</a>
-                <a href="#">Mascotas</a>
-                <a href="#">Noticias</a>
-            </nav>
-            </div>
-    </header>
+        <img src="img/logo=fondo oscuro 2.svg" alt="Logo Sprout en fondo oscuro" class="logo-inicio">
+    </div>
+    
+<header>
+  <div class="menu">
+    <section class="menu-section">
+      <!-- Botón para abrir sidebar lateral -->
+      <button id="sidebar-btn" class="menu-btn" aria-label="Abrir menú lateral">☰</button>
 
-        <main>
-            <section class="producto">
-                <img src="img/unsplash_gFixufaXB0k.png" alt="Cepillo de Bamboo" class="producto__img" />
-                
-                <div class="producto__info">
-                <h1 class="producto__titulo"><span>Cepillo de Bamboo 🌿</span></h1>
-                <p>Cepillo de dientes biodegradable de bamboo.</p>
-                
-                      
-            <article class="lista">
-                <h3 class="lista__titulo">Detalles del producto</h3>
-                <ul>
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="img/logo=fondo oscuro 2.svg" width="150" alt="Logo Sprout" class="menu__logo"/>
+      </a>
+
+      <!-- Botón menú responsive (solo en mobile) -->
+      <button id="menu-btn" class="menu-btn mobile-only" aria-label="Abrir menú de navegación">☰</button>
+    </section>
+
+    <!-- Menú links (desktop y mobile) -->
+    <nav class="menu__arriba" id="menu-links" role="navigation" aria-label="Menú principal">
+      <a href="index.html">Inicio</a>
+      <a href="#">Favoritos</a>
+      <a href="#">Noticias</a>
+      <a href="sprout.html">Sobre nosotros</a>
+    </nav>
+
+    <!-- Carrito -->
+    <div class="header__cart">
+      <button id="cart-btn" class="cart-btn" role="button" aria-label="Abrir carrito de compras">
+        <img src="img/carrito.webp" alt="Carrito de compras" class="cart-icon">
+        <span id="cart-badge" class="badge">0</span>
+      </button>
+
+      <!-- Ventana del carrito -->
+      <div id="cart-modal" class="modal">
+        <div class="modal-content">
+          <span id="close-modal" class="close-btn" aria-label="Cerrar carrito">✖</span>
+          <h2>Tu carrito</h2>
+          <ul id="cart-items"></ul>
+          <p id="cart-empty">Tu carrito está vacío</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Sidebar lateral -->
+<aside id="sidebar" class="sidebar" role="complementary" aria-label="Categorías de productos">
+  <button id="close-sidebar" aria-label="Cerrar menú lateral">✖</button>
+  <nav>
+    <ul>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Favoritos</a></li>
+      <li><a href="#">Cocina</a></li>
+      <li><a href="#">Limpieza</a></li>
+      <li><a href="#">Mascotas</a></li>
+      <li><a href="#">Noticias</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+<main>
+    <section class="producto">
+        <img src="img/unsplash_gFixufaXB0k.png" alt="Cepillo de bamboo ecológico" class="producto__img" />
+        
+        <div class="producto__info">
+            <h1 class="producto__titulo"><span>Cepillo de Bamboo 🌿</span></h1>
+            <button class="add-to-cart boton" aria-label="Agregar cepillo de bamboo al carrito">Agregar al carrito</button>
+            <p>Cepillo de dientes biodegradable de bamboo. Nuestro compromiso: vivir en armonía con el planeta. <span lang="en">Eco-friendly lifestyle</span> en cada producto 🌎.</p>
+        </div>
+              
+        <article class="lista">
+            <h3 class="lista__titulo">Detalles del producto</h3>
+            <ul>
                 <li>100% biodegradable</li>
                 <li>Amigable con el medio ambiente</li>
-                <li>Diseño ergon&#243;mico</li>
-                </ul>
-            </article>
-            
-            </section>
+                <li>Diseño ergonómico</li>
+            </ul>
+        </article>
+    </section>
 
-            <h3 class="galeria">Galería</h3>
-                <section class="galeria-tabla">
-                <div class="galeria-tabla__imagenes"> 
-                    <img src="img/3cepillo.png" alt="3img">
-                    <img src="img/1cepillo.png" alt="1img">
-                    <img src="img/4cepillo.png" alt="4img">
-                    <img src="img/2 cepillo.png" alt="2img">
-                    
-                    
-                </div>
+    <h3 class="galeria">Galería</h3>
+    <section class="galeria-tabla">
+        <div class="galeria-tabla__imagenes"> 
+            <img src="img/3cepillo.png" alt="Tres cepillos de bamboo ecológicos">
+            <img src="img/1cepillo.png" alt="Un cepillo de bamboo individual">
+            <img src="img/4cepillo.png" alt="Cuatro cepillos de bamboo en empaque reciclado">
+            <img src="img/2 cepillo.png" alt="Dos cepillos de bamboo sobre fondo blanco">
+        </div>
 
-                <div>
-                   <table class="tabla-info" cellpadding="8">
-                    <thead>
-                        <tr>
+        <div>
+            <table class="tabla-info" cellpadding="8">
+                <thead>
+                    <tr>
                         <th>Duración</th>
                         <th>Material</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td>Aproximadamente 3 meses</td>
                         <td>Bamboo con cerdas de nylon</td>
-                        </tr>
-                    </tbody>
-                    </table>
-                </div>
-                </section>
-    
-            
-                    <hr>
-                 <form>
-                    <fieldset>
-                        <legend class="opciones">Opciones de compra</legend>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-                        <div>
-                            <h3 class="opciones__color">Elige el color</h3>
-                            <label><input type="radio" name="color" value="negro"> Negro</label>
-                            <label><input type="radio" name="color" value="blanco"> Blanco</label>
-                        </div>
+    <hr>
 
-                        <p></p>
+    <form>
+        <fieldset>
+            <legend class="opciones">Opciones de compra</legend>
 
-                        <div>
-                            <label for="cantidad" class="opciones__cantidad"><h3>Cantidad</h3></label>
-                            <select id="cantidad" name="cantidad">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                        </div>
+            <div>
+                <h3 class="opciones__color">Elige el color</h3>
+                <label for="color-negro"><input type="radio" id="color-negro" name="color" value="negro"> Negro</label>
+                <label for="color-blanco"><input type="radio" id="color-blanco" name="color" value="blanco"> Blanco</label>
+            </div>
 
-                        <p></p>
+            <p></p>
 
-                        <div>
-                            <input type="submit" value="Agregar al carrito" class="boton rounded">
-                            <input type="submit" value="Comprar ahora" class="boton rounded">
-                        </div>
-                    </fieldset>
-                </form>
+            <div>
+                <label for="cantidad" class="opciones__cantidad"><h3>Cantidad</h3></label>
+                <select id="cantidad" name="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
 
+            <p></p>
 
-                <article>
-                    <fieldset>
-                        <legend class="datos">Datos de contacto</legend>
-                        <label for="email">Correo:</label>
-                        <input type="email" id="email" name="email" class="rounded"><br><br>
+            <div>
+                <input type="submit" value="Agregar al carrito" class="boton rounded">
+                <input type="submit" value="Comprar ahora" class="boton rounded">
+            </div>
+        </fieldset>
+    </form>
 
-                        <label for="fecha">Fecha de entrega preferida:</label>
-                        <input type="date" id="fecha" name="fecha" class="datos__fecha rounded">
-                        <div>
-                            <input type="submit" value="Enviar" class="datos__boton rounded" >
-                        </div>
-                    </fieldset>
-                </article>
-            </main>
+    <article>
+        <fieldset>
+            <legend class="datos">Datos de contacto</legend>
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" class="rounded"><br><br>
+
+            <label for="fecha">Fecha de entrega preferida:</label>
+            <input type="date" id="fecha" name="fecha" class="datos__fecha rounded">
+            <div>
+                <input type="submit" value="Enviar" class="datos__boton rounded" >
+            </div>
+        </fieldset>
+    </article>
+</main>
    
 <footer>
     <div class="pie">
-        <img src="img/logo=fondo oscuro 2.svg" width="150" class="pie__logo"/>
-        <nav class="pie__menu">
+        <img src="img/logo=fondo oscuro 2.svg" width="150" alt="Logo Sprout en fondo oscuro" class="pie__logo"/>
+        <nav class="pie__menu" role="navigation" aria-label="Menú inferior">
             <a href="index.html">Inicio</a>
             <a href="#">Favoritos</a>
             <a href="#">Cocina</a>
@@ -144,6 +187,9 @@
         </nav>
     </div>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
+

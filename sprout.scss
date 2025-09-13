@@ -146,10 +146,14 @@ button {
   cursor: pointer;
 }
 
-button::after{
-  content: " 🛒";
-  color: #768743;
-  font-size: 1.5rem;
+button.add-to-cart {
+  color: $bg-principal;
+  background-color: $color-principal;
+  font-family: $fuente-base;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
 }
 
 // ───────── IMG MAIN ─────────
@@ -316,5 +320,262 @@ $color-texto: #000000;
     margin-bottom: 10px;
     overflow: hidden;
   }
+}
+
+//
+
+// MENÚ RESPONSIVE
+@media (max-width: 800px) {
+  .menu__arriba {
+    display: none;
+    flex-direction: column;
+    background-color: $color-principal;
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+
+    a {
+      padding: 10px 0;
+      display: block;
+    }
+  }
+
+  .menu__arriba.active {
+    display: flex; // se muestra cuando tiene la clase "active"
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; // oculto al inicio
+  width: 260px;
+  height: 100%;
+  background-color: $color-principal;
+  color: $bg-principal;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+#close-sidebar {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: $bg-principal;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: $bg-principal;
+  text-decoration: none;
+  font-family: $fuente-titulos;
+}
+
+.sidebar a:hover {
+  color: $color-secundario;
+}
+
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: $color-dark;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+.header__cart {
+  position: relative;
+}
+
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: $color-base;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.menu-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+// Solo mostrar el botón menu responsive en mobile
+.mobile-only {
+  display: none;
+
+  @media (max-width: 800px) {
+    display: inline-block;
+  }
+}
+
+// Menu responsive
+.menu__arriba {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 800px) {
+    display: none;
+    flex-direction: column;
+    background-color: $color-principal;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+
+    a {
+      padding: 10px 0;
+      display: block;
+    }
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+
+//basura
+.remove-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: red;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+
+  .cart-icon {
+    width: 20px;  // ajusta tamaño
+    height: 20px;
+  }
+
+  //
+  // Animación de pantalla inicial
+.pantalla-inicio {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-principal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: desaparecerPantalla 2s forwards 2s;
+  z-index: 1000; // siempre encima de todo
+  pointer-events: all; // bloquea clics mientras está visible
+}
+
+// Logo animado
+.logo-inicio {
+  width: 80%;
+  max-width: 400px;
+  animation: rebote 1s forwards;
+}
+
+// Header y carrito clickeables
+header, .header__cart {
+  position: relative;
+  z-index: 500;
+  pointer-events: auto; // <--- esto permite que los botones funcionen
+}
+
+// Carrito modal
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: $color-base;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+// Botones del header
+.menu-btn, .cart-btn {
+  margin-right: 10px;
+  background: $color-principal;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 25%;
 }
 
